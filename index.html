@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Someone Special</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            padding: 50px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .image-container {
+            margin: 20px;
+        }
+        .image-container img {
+            max-width: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.8em;
+        }
+        .heart {
+            color: red;
+        }
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff3d3d;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>To My Dearest</h1>
+        <p>You are my sunshine on cloudy days, my calm in the storm, and my forever muse. This is just a small way to say how much you mean to me.</p>
+    </header>
+
+    <div class="image-container">
+        <img id="randomImage" src="https://via.placeholder.com/200?text=Memory" alt="Random Memory">
+    </div>
+
+    <button onclick="generateRandomContent()">Click Me</button>
+
+    <p id="message"></p>
+
+    <footer>
+        <p>Made with <span class="heart">&#9829;</span> just for you.</p>
+    </footer>
+
+    <script>
+        const messages = [
+            "You make my world brighter every single day. I love you! ❤️",
+            "You are the reason I smile so much! 😊",
+            "Life feels perfect with you in it. 💕",
+            "Every moment with you is a treasure. 🌟",
+            "You are my greatest adventure. 🌍",
+            "In your light, I learn how to love. In your beauty, how to make poems.",
+            "I have died every day waiting for you. Darling, don't be afraid I have loved you for a thousand years.",
+            "You have bewitched me, body and soul, and I love, I love, I love you.",
+            "To the world, you may be one person, but to one person you are the world.",
+            "Love is not about how many days, months, or years you have been together. Love is about how much you love each other every single day.",
+            "I look at you and see the rest of my life in front of my eyes." ,
+            "I swear I couldn't love you more than I do right now, and yet I know I will tomorrow.",
+            "My love for you is past the mind, beyond my heart, and into my soul.",
+            "I have loved you all my life; it has just taken me this long to find you.",
+            "I would rather spend one lifetime with you than face all the ages of this world alone.",
+            "In you, I've found the love of my life and my closest, truest friend.",
+            "I love you more than there are stars in the sky and fish in the sea.",
+            "Every love story is beautiful, but ours is my favorite." ,
+            "You are my today and all of my tomorrows.",
+            "I love you as certain dark things are to be loved, in secret, between the shadow and the soul.",
+            "I love you as I love my own shadow, a shadow that can never be me.",
+            "I love you more than coffee, but please don't make me prove it.",
+            "Love her but leave her wild.",
+            "You are my sun, my moon, and all my stars.",
+            "Love is a single soul inhabiting two bodies.",
+            "I am yours, don't give myself back to me.",
+            "You have me. Until every last star in the galaxy dies. You have me.",
+            "Your voice is my favorite sound.",
+            "So, I love you because the entire universe conspired to help me find you.",
+            "I love you and that's the beginning and end of everything.",
+            "You are my heart, my life, my one and only thought.",
+            "To love is nothing. To be loved is something. But to love and be loved, that’s everything.",
+            "I love you not only for what you are but for what I am when I am with you.",
+            "In you, I have found the love of my life and my closest, truest friend.",
+            "I could start fires with what I feel for you.",
+            "You are every reason, every hope, and every dream I've ever had.",
+
+        ];
+
+        const images = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh9gBGg89kPikZ6ioOk0Fhx5IsxrgYtGPLNw&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiKMI-g-NBOTTGQcblL0u39AICtDqsWmmKUQ&s",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvWFBJRTvckSnEsYDODOcjDWiWD4itWeUUng&s",
+            "https://d.newsweek.com/en/full/2393374/couple-look-tablet.jpg?w=1200&f=7cae8d6dee916beec2227563186f5173",
+            "https://i.dailymail.co.uk/i/pix/2014/07/31/article-0-1D7F16F700000578-360_634x424.jpg"
+        ];
+
+        function generateRandomContent() {
+            // Generate a random message
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').textContent = randomMessage;
+            document.getElementById('message').style.display = 'block';
+
+            // Generate a random image
+            const randomImage = images[Math.floor(Math.random() * images.length)];
+            document.getElementById('randomImage').src = randomImage;
+        }
+    </script>
+</body>
+</html>
